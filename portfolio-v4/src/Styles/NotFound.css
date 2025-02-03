@@ -1,0 +1,68 @@
+.not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Prend toute la hauteur de l'écran */
+  background: whitesmoke; /* Fond plus foncé pour un meilleur contraste */
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.not-found-container {
+  background: rgba(0, 0, 0, 0.85); /* Boîte foncée avec un effet de transparence */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+  max-width: 600px;
+  width: 80%;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.not-found h1 {
+  font-size: 8rem;
+  color: #ff4c4c;
+  font-weight: bold;
+  margin: 0;
+}
+
+.not-found p {
+  font-size: 1.4rem;
+  margin: 15px 0;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.not-found strong {
+  font-weight: bold;
+  color:red;
+}
+
+.btn-home {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 25px;
+  font-size: 1.3rem;
+  color: #fff;
+  background: #ff4c4c;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s ease-in-out;
+  font-weight: bold;
+}
+
+.btn-home:hover {
+  background: #ff1a1a;
+}
+
+/* Effet d'apparition */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

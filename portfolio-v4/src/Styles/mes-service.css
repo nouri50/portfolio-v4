@@ -1,0 +1,32 @@
+/* Services section */
+.services-section {
+  background: linear-gradient(135deg, #f8fff8, #d9f4d9);
+  color: #333;
+  text-align: center;
+}
+
+.services-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.service-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card h3 {
+  color: #007bff;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}

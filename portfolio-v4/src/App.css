@@ -1,0 +1,44 @@
+/* Assurer que le conteneur principal prend toute la hauteur */
+body, html {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Conteneur principal de la page */
+.content-container {
+  flex: 1; /* Prend tout l'espace disponible pour pousser le footer vers le bas */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Contenu principal de la page */
+.main-content {
+  flex: 1; /* Permet au contenu de s'étendre pour occuper l'espace disponible */
+}
+
+/* Footer */
+.footer {
+  background-color: #1a1a1a;
+  color: #aaa;
+  padding: 10px 0;
+  text-align: center;
+}
+/* Global adjustments for all pages */
+@media (max-width: 768px) {
+  h1, h2, h3 {
+    font-size: 1.5rem; /* Taille uniforme pour les titres */
+  }
+
+  p {
+    font-size: 1rem; /* Taille uniforme pour les paragraphes */
+  }
+
+  .button-link {
+    font-size: 0.9rem; /* Taille des boutons */
+    padding: 8px 15px;
+  }
+}
+

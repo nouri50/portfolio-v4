@@ -1,0 +1,857 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background-color:  #e8f1f8;
+  color:  #e8f1f8;
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
+  padding: 0;
+  color: #222; 
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.cta-button {
+  background-color:  #0056b3;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color:  #3b5998;
+}
+
+/* Header */
+/* Style global du header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #0056b3;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.header-logo {
+  height: 50px;
+}
+
+.header-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.header-nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+.header-nav li {
+  list-style: none;
+}
+
+.header-nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.header-nav a:hover {
+  color: #ffcc00;
+}
+
+/* Menu burger */
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.burger-line {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-nav {
+    display: none;
+    flex-direction: column;
+    background-color: #0056b3;
+    position: absolute;
+    top: 60px; /* Ajusté pour éviter de chevaucher le header */
+    right: 10px; /* Alignement à droite */
+    width: auto; /* Pour s'adapter au contenu */
+    padding: 10px;
+    gap: 10px;
+    border-radius: 5px; /* Ajout de coins arrondis */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Effet d'ombre */
+  }
+
+  .header-nav.open {
+    display: flex;
+  }
+
+  .burger-menu {
+    display: flex;
+  }
+}
+.language-switcher-mobile {
+  display: none; /* Caché par défaut */
+}
+
+/* ✅ Affiche le sélecteur de langue uniquement si le menu burger est ouvert */
+.header-nav.open .language-switcher-mobile {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* ✅ Sélecteur de langue visible en desktop (hors du menu burger) */
+.language-switcher-desktop {
+  display: block;
+}
+
+/* ✅ En mode mobile, cache le sélecteur en dehors du menu */
+@media (max-width: 768px) {
+  .language-switcher-desktop {
+    display: none;
+  }
+}
+
+
+/* Section Styles */
+.section {
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2rem;
+  color:  #0056b3;
+  margin-bottom: 20px;
+}
+
+/* Landing Page */
+/* Landing Page */
+/* Section principale */
+/* Section principale */
+.landing-page {
+  background-color: #e8f1f8;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.landing-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.landing-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.landing-title {
+  font-size: 2.5rem;
+  color: #003d80;
+  margin-bottom: 20px;
+}
+
+.landing-description {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* Boutons */
+.cta-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #40739e;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+  background-color: #3b5998;
+  transform: scale(1.05);
+}
+
+.cta-link {
+  color: #40739e;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.cta-link:hover {
+  color: #3b5998;
+}
+
+/* Boutons sociaux */
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.linkedin {
+  background-color: #0077b5;
+}
+
+.github {
+  background-color: #333;
+}
+
+.facebook {
+  background-color: #1877f2;
+}
+
+.share {
+  background-color: #1abc9c;
+}
+
+.social-button:hover {
+  transform: scale(1.1);
+}
+
+.linkedin:hover {
+  background-color: #005582;
+}
+
+.github:hover {
+  background-color: #1b1b1b;
+}
+
+.facebook:hover {
+  background-color: #145dbb;
+}
+
+.share:hover {
+  background-color: #16a085;
+}
+
+
+
+/* Animation fade-in */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Couleurs spécifiques pour chaque réseau */
+.linkedin {
+  background-color: #0077b5;
+}
+
+.github {
+  background-color: #333;
+}
+
+.facebook {
+  background-color: #1877f2;
+}
+
+.share {
+  background-color: #40739e;
+}
+
+/* Hover effects */
+
+/* Couleurs spécifiques pour chaque réseau */
+.linkedin {
+  background-color: #0077b5;
+  color: white;
+}
+
+.linkedin:hover {
+  background-color: #005582;
+}
+
+.github {
+  background-color: #333333;
+  color: white;
+}
+
+.github:hover {
+  background-color: #1b1b1b;
+}
+
+.facebook {
+  background-color: #1877f2;
+  color: white;
+}
+
+.facebook:hover {
+  background-color: #145dbb;
+}
+
+.share {
+  background-color: #40739e;
+  color: white;
+}
+
+.share:hover {
+  background-color: #2b4e71;
+}
+
+/* Parcours Section */
+/* Section des technologies */
+/* Section globale */
+/* Styles généraux */
+/* Styles globaux pour le conteneur */
+/* Ajustement global pour les cartes */
+/* Style global pour les sections */
+.section {
+  padding: 40px 20px;
+  background-color: #f5f8fa;
+  color: #333;
+}
+
+/* Conteneur général */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  margin: 0 auto;
+}
+
+/* Style des cartes */
+.card {
+  flex: 1 1 45%; /* Par défaut, les cartes prennent 45% de la largeur */
+  max-width: 500px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Titre principal */
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 320px;
+}
+
+.parcours-content {
+  text-align: left;
+}
+
+.parcours-section {
+  margin-bottom: 15px;
+}
+
+.parcours-item h4 {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.parcours-item .date {
+  font-size: 14px;
+  color: gray;
+}
+
+/* Grid pour les technologies */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  justify-items: center;
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cv-preview {
+  width: 100%;
+  height: 200px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.btn-download {
+  display: inline-block;
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-download:hover {
+  background-color: #0056b3;
+}
+
+
+@media (max-width: 480px) {
+  .card h2 {
+    font-size: 1.6rem;
+  }
+
+  .parcours-section h3 {
+    font-size: 1.2rem;
+  }
+
+  .tech-item p {
+    font-size: 0.75rem;
+  }
+}
+/* Conteneur pour centrer et ajuster la taille */
+
+
+.services-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #333;
+}
+
+.service-card h3 {
+  color: #0056b3;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+
+
+/* Projects Section */
+
+.projects-section {
+  padding: 2rem;
+  background-color: #f7f9fc;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #1d3557;
+  margin-bottom: 2rem;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.project-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  color: #1d3557;
+}
+
+.details-button {
+  background-color: #457b9d;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  margin: 1rem auto 0; /* Centrer le bouton */
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.details-button:hover {
+  background-color: #1d3557;
+}
+
+.project-details {
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.project-details p {
+  font-size: 1rem;
+  color: #333333;
+  margin-bottom: 1rem;
+}
+
+.technologies-icons {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.technologies-icons h4 {
+  font-size: 1rem;
+  color: #1d3557;
+  margin-bottom: 0.5rem;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: #457b9d;
+}
+
+.github-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #1d3557;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.github-link:hover {
+  color: #457b9d;
+}
+
+.project-card.expanded {
+  min-height: 450px;
+}
+
+/* Responsive Design pour mobile */
+@media (max-width: 768px) {
+  .project-card {
+    width: 100%;
+  }
+}
+
+/* Contact Section */
+/* Section Contact */
+.contact {
+  padding: 50px 20px;
+  background-color: #f7f9fc; /* Couleur d'arrière-plan */
+  text-align: center;
+}
+
+.contact .section-title {
+  font-size: 2rem;
+  color: #1d3557; /* Couleur du titre */
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Espacement entre les champs */
+  max-width: 400px; /* Largeur maximale du formulaire */
+  margin: 0 auto; /* Centre le formulaire */
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%; /* Champs prennent toute la largeur */
+  padding: 10px; /* Espacement interne */
+  border: 1px solid #ddd; /* Bordure des champs */
+  border-radius: 5px; /* Coins arrondis */
+  font-size: 1rem; /* Taille de police */
+  background-color: #fff; /* Fond blanc */
+}
+
+.contact-form textarea {
+  resize: none; /* Désactive le redimensionnement */
+  height: 100px; /* Hauteur du champ Message */
+}
+
+.contact-form .cta-button {
+  background-color: #457b9d; /* Couleur du bouton */
+  color: white; /* Couleur du texte */
+  padding: 10px 15px; /* Espacement interne */
+  border: none;
+  border-radius: 5px; /* Coins arrondis */
+  cursor: pointer; /* Curseur pointeur */
+  font-size: 1rem; /* Taille de police */
+  transition: background-color 0.3s ease; /* Effet au survol */
+}
+
+.contact-form .cta-button:hover {
+  background-color: #1d3557; /* Couleur au survol */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact {
+    padding: 30px 15px; /* Réduction de l'espacement sur petit écran */
+  }
+
+  .contact-form {
+    width: 100%; /* Champs prennent toute la largeur sur mobile */
+  }
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #2c3e50; /* Couleur de fond */
+  color: #ecf0f1; /* Couleur du texte */
+  padding: 20px;
+  text-align: center;
+  margin-top: 40px;
+  opacity: 0; /* Invisible au début */
+  transform: translateY(20px); /* Animation : commence en bas */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Animation */
+}
+
+.footer.show {
+  opacity: 1; /* Visible une fois la classe "show" ajoutée */
+  transform: translateY(0); /* Rentre à sa position normale */
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-content p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: white;
+}
+
+.footer-content a {
+  color: #3498db; /* Couleur des liens */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-content a:hover {
+  color: #ecf0f1; /* Couleur au survol */
+}
+
+/* Icônes sociales */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  color: #ecf0f1; /* Couleur des icônes */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #3498db; /* Couleur au survol */
+  transform: scale(1.2); /* Effet d'agrandissement */
+}
+
+
+
+/* Assurez-vous que le body et l'application occupent tout l'espace pour placer correctement le footer */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #e8f1f8; /* Couleur de fond générale */
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* L'application occupe toute la hauteur */
+}
+
+.footer {
+  margin-top: auto; /* Place le footer en bas si le contenu est insuffisant */
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section {
+  animation: fadeInUp 1s ease both;
+}
+/* Styles pour l'animation fade-in */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (max-width: 768px) {
+  .service-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
