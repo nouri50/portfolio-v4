@@ -5,40 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
 
-    <!-- ✅ SEO de base -->
+    <title>Portfolio de Nouri Morouche</title>
+    
+    <!-- ✅ Icônes et SEO -->
     <meta name="description" content="Portfolio de Nouri Morouche, développeur web spécialisé en React, Symfony et MySQL." />
-    <meta name="keywords" content="Nouri Morouche, développeur web, portfolio, React, Symfony, MySQL, Node.js" />
+    <meta name="keywords" content="Nouri Morouche, développeur web, React, Symfony, MySQL" />
     <meta name="author" content="Nouri Morouche" />
-
-    <!-- ✅ Open Graph (Réseaux Sociaux) -->
-    <meta property="og:title" content="Portfolio de Nouri Morouche - Développeur Web" />
-    <meta property="og:description" content="Découvrez les projets et compétences de Nouri Morouche, développeur web." />
-    <meta property="og:image" content="/portfolio-thumbnail.png" />
-    <meta property="og:url" content="https://nmoroucheportfolio.fr" />
-    <meta property="og:type" content="website" />
-
-    <!-- ✅ Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Portfolio de Nouri Morouche - Développeur Web" />
-    <meta name="twitter:description" content="Découvrez les projets et compétences de Nouri Morouche, développeur web." />
-    <meta name="twitter:image" content="/portfolio-thumbnail.png" />
-
-    <!-- ✅ Titre de la page -->
-    <title>Portfolio Nouri Morouche - Développeur Web</title>
-
-    <!-- ✅ Icônes -->
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/manifest.json" />
-
-    <!-- ✅ Polices Google -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
 
-    <!-- ✅ Google Analytics (Activé seulement en production) -->
+    <!-- ✅ Google Analytics (optionnel, activé uniquement en production) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-72S8X47T2F"></script>
     <script>
       if (window.location.hostname !== "localhost") {
@@ -46,38 +23,11 @@
         function gtag() { dataLayer.push(arguments); }
         gtag("js", new Date());
         gtag("config", "G-72S8X47T2F");
-      } else {
-        console.log("🔴 Google Analytics désactivé en local.");
-        window["ga-disable-G-72S8X47T2F"] = true;
       }
     </script>
-
-    <!-- ✅ JSON-LD pour SEO et données structurées -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Portfolio de Nouri Morouche",
-      "url": "https://nmoroucheportfolio.fr",
-      "description": "Développeur web spécialisé en React, Symfony et MySQL.",
-      "author": {
-        "@type": "Person",
-        "name": "Nouri Morouche",
-        "url": "https://nmoroucheportfolio.fr"
-      }
-    }
-    </script>
-
   </head>
   <body>
-    <!-- ✅ Google Tag Manager (Noscript) -->
-    <noscript>
-      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TWT9DVNF" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-    </noscript>
-
     <div id="root"></div>
-
-    <!-- ✅ Chargement de React avec Vite -->
-    <script type="module" src="../src/index.jsx"></script>
+    <script type="module" src="/src/index.jsx"></script>
   </body>
 </html>

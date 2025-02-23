@@ -5,7 +5,7 @@
   "description": "Portfolio personnel développé avec React et Vite",
   "private": true,
   "scripts": {
-    "dev": "vite",
+    "dev": "vite", 
     "build": "vite build",
     "preview": "vite preview"
   },
@@ -22,18 +22,6 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.4",
-    "vite": "^6.0.11"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "vite": "^6.1.1"
   }
 }

@@ -5,17 +5,18 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 
 module.exports = {
-  mode: "development", // Mettre "production" en ligne
-  entry: "./src/index.js",
+  mode: "development",
+  entry: "./src/index.jsx",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
-    assetModuleFilename: "images/[hash][ext][query]", // 🔥 Stockage des images optimisé
+    publicPath: "/",
+    assetModuleFilename: "images/[hash][ext][query]",
   },
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/, // ✅ Support JS et JSX
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
@@ -25,15 +26,15 @@ module.exports = {
         },
       },
       {
-        test: /\.css$/, // ✅ Support CSS
+        test: /\.css$/,
         use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
       {
-        test: /\.(png|jpe?g|gif|webp|svg)$/, // ✅ Support images
+        test: /\.(png|jpe?g|gif|webp|svg)$/,
         type: "asset/resource",
       },
       {
-        test: /\.(woff|woff2|eot|ttf|otf)$/, // ✅ Support fonts
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
         type: "asset/resource",
         generator: {
           filename: "fonts/[hash][ext][query]",
@@ -62,16 +63,21 @@ module.exports = {
     extensions: [".js", ".jsx"],
   },
   devServer: {
-    static: "./dist",
+    static: path.resolve(__dirname, "public"),
+    compress: true,
     hot: true,
-    port: 3000,
-    open: true, // Ouvre automatiquement le navigateur
+    port: 4000,
+    historyApiFallback: true, // 🔥 important pour React Router
+    open: true,
+    devMiddleware: {
+      publicPath: "/", // 🔥 Correction ici
+    },
   },
   plugins: [
-    new CleanWebpackPlugin(), // Nettoie le dossier dist
-    new MiniCssExtractPlugin({ filename: "styles.css" }), // Extraction CSS
+    new CleanWebpackPlugin(),
+    new MiniCssExtractPlugin({ filename: "styles.css" }),
     new HtmlWebpackPlugin({
-      template: "./public/index.html", // Utilisation d'un template HTML
+      template: path.resolve(__dirname, "public", "index.html"),
       filename: "index.html",
       inject: "body",
     }),

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nmoroucheportfolio.fr/sitemap.xml

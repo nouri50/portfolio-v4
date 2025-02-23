@@ -1,48 +1,57 @@
-/* Supprime toutes les marges et ajuste l'affichage */
 .cv-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: 100vw;
-  height: 100vh;
-  padding: 0;
-  margin: 0;
-  background-color: #f5f7fa;
-  overflow: hidden; /* Empêche le défilement */
+  padding: 20px;
 }
 
-/* Conteneur plein écran pour l'iframe */
-.cv-fullscreen {
-  width: 100vw;
-  height: 100vh; /* Prend toute la hauteur de l'écran */
+.cv-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.zoom-controls {
   display: flex;
-  justify-content: center;
   align-items: center;
-  overflow: hidden;
+  gap: 10px;
+  margin-bottom: 15px;
 }
 
-/* L'iframe doit remplir toute la fenêtre */
+.zoom-button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.zoom-button:hover {
+  background: #0056b3;
+}
+
+.cv-fullscreen {
+  width: 90%;
+  max-width: 800px;
+  border: 1px solid #ccc;
+}
+
 .cv-preview {
   width: 100%;
-  height: 100%;
-  border: none;
+  height: 80vh;
 }
 
-/* Bouton retour bien positionné */
 .back-button {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
+  margin-top: 20px;
   text-decoration: none;
-  background-color: #007bff;
-  color: white;
-  padding: 10px 15px;
-  border-radius: 5px;
-  transition: background 0.3s ease;
-  z-index: 1000;
+  font-size: 18px;
+  color: #007bff;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .back-button:hover {
-  background-color: #0056b3;
+  text-decoration: underline;
 }

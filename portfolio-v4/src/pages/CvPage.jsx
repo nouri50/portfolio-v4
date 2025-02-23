@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, ZoomIn, ZoomOut } from "react-feather";
-import { useTranslation } from "react-i18next"; // ✅ Import pour la traduction
+import { useTranslation } from "react-i18next";
 import "../Styles/CvPage.css";
 
 const CvPage = () => {
@@ -28,8 +28,9 @@ const CvPage = () => {
       <div className="cv-fullscreen">
         <iframe
           className="cv-preview"
-          src={`/assets/Cv-NouriMorouche.pdf#zoom=${zoom}`}
+          src={`/Cv-NouriMorouche.pdf#zoom=${zoom}`} // 🔥 Correction du chemin du PDF
           title={t("cvTitle")}
+          style={{ width: "100%", height: "90vh", border: "none" }} // Assure un affichage correct
         />
       </div>
 
