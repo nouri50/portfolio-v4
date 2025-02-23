@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
-import { FaGithub, FaReact, FaNodeJs, FaDatabase } from "react-icons/fa";
+import { FaGithub, FaReact, FaDatabase, FaCss3Alt } from "react-icons/fa";
 
 import project1Image from "../image/gestionnaire_des_tache_comp.webp";
 import project2Image from "../image/portfolio.webp";
 import project3Image from "../image/blog.webp";
+import project4Image from "../image/site_ecommerce-jeuxvideo.png"; // Image fictive pour le projet e-commerce
 
 const Projects = () => {
   const { t } = useTranslation();
@@ -21,8 +23,8 @@ const Projects = () => {
       description: t("taskManagerDesc"),
       technologies: [
         { name: "React.js", icon: <FaReact /> },
-        { name: "Node.js", icon: <FaNodeJs /> },
-        { name: "MongoDB", icon: <FaDatabase /> }
+        { name: "CSS", icon: <FaCss3Alt /> },
+        { name: "MySQL", icon: <FaDatabase /> }
       ],
       image: project1Image,
       githubLink: "https://github.com/nouri50/GESTIONNAIRE-de-tache-"
@@ -31,7 +33,10 @@ const Projects = () => {
       id: 2,
       title: t("portfolio"),
       description: t("portfolioDesc"),
-      technologies: [{ name: "React.js", icon: <FaReact /> }],
+      technologies: [
+        { name: "React.js", icon: <FaReact /> },
+        { name: "CSS", icon: <FaCss3Alt /> }
+      ],
       image: project2Image,
       githubLink: "https://github.com/nouri50/portfoliov2"
     },
@@ -41,22 +46,44 @@ const Projects = () => {
       description: t("blogDesc"),
       technologies: [
         { name: "React.js", icon: <FaReact /> },
-        { name: "Node.js", icon: <FaNodeJs /> },
-        { name: "MongoDB", icon: <FaDatabase /> }
+        { name: "CSS", icon: <FaCss3Alt /> },
+        { name: "MySQL", icon: <FaDatabase /> }
       ],
       image: project3Image,
+      githubLink: null
+    },
+    {
+      id: 4,
+      title: "E-commerce de jeux vidéo",
+      description: "Site en cours de conception, développé avec React, CSS et MySQL.",
+      technologies: [
+        { name: "React.js", icon: <FaReact /> },
+        { name: "CSS", icon: <FaCss3Alt /> },
+        { name: "MySQL", icon: <FaDatabase /> }
+      ],
+      image: project4Image,
       githubLink: null
     },
   ];
 
   return (
-    <section id="projects" className="section projects">
-      <h2 className="section-title">{t("projectsTitle")}</h2>
+    <section id="projects" className="section projects fade-in" aria-labelledby="projects-title">
+      {/* ✅ SEO avec Helmet */}
+      <Helmet>
+        <title>{t("projectsTitle")} - Nouri Morouche</title>
+        <meta name="description" content={t("portfolioDesc")} />
+        <meta property="og:title" content={t("projectsTitle")} />
+        <meta property="og:description" content={t("portfolioDesc")} />
+        <meta property="og:url" content="https://nmoroucheportfolio.fr/projects" />
+        <meta property="og:type" content="website" />
+      </Helmet>
+
+      <h2 id="projects-title" className="section-title">{t("projectsTitle")}</h2>
       <div className="projects-container">
         {projects.map((project) => (
-          <div key={project.id} className="project-card">
-            <img src={project.image} alt={project.title} className="project-image" />
-            <h3>{project.title}</h3>
+          <article key={project.id} className="project-card" aria-labelledby={`project-${project.id}`}>
+            <img src={project.image} alt={project.title} className="project-image" loading="lazy" />
+            <h3 id={`project-${project.id}`}>{project.title}</h3>
             <p>{project.description}</p>
 
             <button className="details-button" onClick={() => toggleDetails(project.id)}>
@@ -83,7 +110,7 @@ const Projects = () => {
                 )}
               </div>
             )}
-          </div>
+          </article>
         ))}
       </div>
     </section>

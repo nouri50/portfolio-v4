@@ -1,7 +1,7 @@
 import React from "react";
-import { FaLinkedin, FaGithub, FaFacebook } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
-import { trackEvent } from "../utils/analytics";
+import { FaLinkedin, FaGithub, FaFacebook } from "react-icons/fa";
 import profileImage from "../image/photo-developpeur.webp";
 
 function LandingPage() {
@@ -9,6 +9,11 @@ function LandingPage() {
 
   return (
     <section id="landing-page" className="landing-page" aria-label={t("landingSection")}>
+      <Helmet>
+        <title>{t("welcome")} - Nouri Morouche</title>
+        <meta name="description" content={t("description")} />
+      </Helmet>
+
       <div className="landing-content">
         <img src={profileImage} alt={t("altProfileImage")} className="landing-image" loading="lazy" />
         <h1 className="landing-title">{t("welcome")}</h1>

@@ -1,0 +1,48 @@
+/* Supprime toutes les marges et ajuste l'affichage */
+.cv-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-color: #f5f7fa;
+  overflow: hidden; /* Empêche le défilement */
+}
+
+/* Conteneur plein écran pour l'iframe */
+.cv-fullscreen {
+  width: 100vw;
+  height: 100vh; /* Prend toute la hauteur de l'écran */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* L'iframe doit remplir toute la fenêtre */
+.cv-preview {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Bouton retour bien positionné */
+.back-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  text-decoration: none;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+  z-index: 1000;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}

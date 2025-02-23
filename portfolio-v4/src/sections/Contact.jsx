@@ -34,11 +34,19 @@ function Contact() {
         <meta name="description" content={t("contactDescription")} />
       </Helmet>
 
-      <h2 className="section-title">{t("contactMe")}</h2>
+      {/* 🔹 Correction de l'affichage du titre */}
+      <h2 className="section-title">{t("contactTitle")}</h2> 
+
       <form className="contact-form" onSubmit={handleSubmit}>
-        <input type="text" name="name" placeholder={t("name")} value={formData.name} onChange={handleChange} required aria-label={t("name")} />
-        <input type="email" name="email" placeholder={t("email")} value={formData.email} onChange={handleChange} required aria-label={t("email")} />
-        <textarea name="message" placeholder={t("message")} value={formData.message} onChange={handleChange} required aria-label={t("message")}></textarea>
+        <label htmlFor="name">{t("name")}</label>
+        <input type="text" id="name" name="name" placeholder={t("name")} value={formData.name} onChange={handleChange} required />
+
+        <label htmlFor="email">{t("email")}</label>
+        <input type="email" id="email" name="email" placeholder={t("email")} value={formData.email} onChange={handleChange} required />
+
+        <label htmlFor="message">{t("message")}</label>
+        <textarea id="message" name="message" placeholder={t("message")} value={formData.message} onChange={handleChange} required></textarea>
+
         <button type="submit" className="cta-button">{t("send")}</button>
       </form>
     </section>

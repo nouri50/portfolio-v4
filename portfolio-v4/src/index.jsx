@@ -1,15 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { HelmetProvider } from "react-helmet-async"; // ✅ Vérifie bien cet import !
+import { BrowserRouter } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async"; // Importation de HelmetProvider
 import App from "./App";
-import "./i18n"; // Importer la configuration i18n
+import "./reset/index.css";
+import "./Styles/global.css";
 
+// 🌍 Importation de i18n pour la traduction
+import "./utils/i18n";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
-  <HelmetProvider> {/* Assure-toi que HelmetProvider englobe l'application */}
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  </HelmetProvider>
+  <React.StrictMode>
+    <HelmetProvider> {/* Englobant l'application avec HelmetProvider */}
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </HelmetProvider>
+  </React.StrictMode>
 );
