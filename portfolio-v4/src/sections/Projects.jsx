@@ -54,8 +54,8 @@ const Projects = () => {
     },
     {
       id: 4,
-      title: "E-commerce de jeux vidéo",
-      description: "Site en cours de conception, développé avec React, CSS et MySQL.",
+      title: t("gamingEcommerce"), // ✅ Utilisation de la traduction
+      description: t("gamingEcommerceDesc"), // ✅ Utilisation de la traduction
       technologies: [
         { name: "React.js", icon: <FaReact /> },
         { name: "CSS", icon: <FaCss3Alt /> },

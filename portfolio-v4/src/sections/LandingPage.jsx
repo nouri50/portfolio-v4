@@ -20,7 +20,7 @@ function LandingPage() {
         <p className="landing-description">{t("description")}</p>
 
         <div className="social-buttons">
-          <a href="https://www.linkedin.com/in/nouri-morouche" className="social-button linkedin" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/nouri-morouche-9a8237140/" className="social-button linkedin" target="_blank" rel="noopener noreferrer">
             <FaLinkedin />
           </a>
           <a href="https://github.com/nouri50" className="social-button github" target="_blank" rel="noopener noreferrer">

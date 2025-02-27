@@ -19,10 +19,13 @@ const resources = {
       blogDesc: "Un blog interactif pour publier et commenter des articles.",
       taskManager: "Gestionnaire de tâches",
       taskManagerDesc: "Une application performante pour organiser vos tâches quotidiennes.",
+      gamingEcommerce: "E-commerce de jeux vidéo", // ✅ Ajout de la traduction
+      gamingEcommerceDesc: "Site en cours de conception, développé avec React, CSS et MySQL.", // ✅ Ajout de la traduction
       viewDetails: "Voir les détails",
       hideDetails: "Masquer les détails",
       technologiesUsed: "Technologies utilisées",
       viewOnGithub: "Voir sur GitHub",
+      notAvailable: "Non disponible",
 
       // 🔹 Services
       myServices: "Mes Services",
@@ -57,7 +60,10 @@ const resources = {
       cvTitle: "Mon CV",
       cvPreview: "Découvrez un aperçu de mon CV et consultez-le en ligne.",
       viewFullCV: "Voir mon CV en ligne",
-      downloadCV: "Télécharger le CV"
+      downloadCV: "Télécharger le CV",
+
+      // 🔹 Boutons
+      backToHome: "Retour à l'accueil"
     }
   },
   en: {
@@ -77,10 +83,13 @@ const resources = {
       blogDesc: "An interactive blog to publish and comment on articles.",
       taskManager: "Task Manager",
       taskManagerDesc: "A powerful application to organize your daily tasks.",
+      gamingEcommerce: "Video Game E-commerce", // ✅ Ajout de la traduction
+      gamingEcommerceDesc: "Website under development, built with React, CSS, and MySQL.", // ✅ Ajout de la traduction
       viewDetails: "View details",
       hideDetails: "Hide details",
       technologiesUsed: "Technologies used",
       viewOnGithub: "View on GitHub",
+      notAvailable: "Not available",
 
       // 🔹 Services
       myServices: "My Services",
@@ -115,19 +124,22 @@ const resources = {
       cvTitle: "My Resume",
       cvPreview: "See a preview of my resume and view it online.",
       viewFullCV: "View my full CV",
-      downloadCV: "Download CV"
+      downloadCV: "Download CV",
+
+      // 🔹 Buttons
+      backToHome: "Back to Home"
     }
   }
 };
 
 i18n
-  .use(initReactI18next) // Liens avec react-i18next
+  .use(initReactI18next) // 📌 Connexion à react-i18next
   .init({
     resources,
-    lng: "fr",  // Langue par défaut
-    fallbackLng: "fr", // Langue de secours
+    lng: "fr", // ✅ Langue par défaut en français
+    fallbackLng: "fr", // ✅ Si une langue n'est pas disponible, revenir au français
     interpolation: {
-      escapeValue: false, // Pas nécessaire pour React
+      escapeValue: false, // ✅ Pas nécessaire pour React
     },
   });
 
