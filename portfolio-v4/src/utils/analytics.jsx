@@ -1,14 +1,15 @@
 export const initGoogleAnalytics = (measurementId) => {
   const isLocalhost = window.location.hostname === "localhost";
-  const isDevelopment = process.env.NODE_ENV !== "production";
 
-  if (isLocalhost || isDevelopment) {
-    console.log("🔴 Google Analytics désactivé en mode local ou développement.");
+  // 🚫 Désactive totalement Google Analytics en local
+  if (isLocalhost) {
+    console.log("🔴 Google Analytics est complètement désactivé en local !");
+    window[`ga-disable-${measurementId}`] = true; // Bloque toutes les requêtes
     return;
   }
 
   if (typeof window.gtag !== "function") {
-    console.warn("⚠️ Google Analytics n'est pas chargé. Vérifie que ton script est bien ajouté dans index.html.");
+    console.warn("⚠️ Google Analytics n'est pas chargé.");
     return;
   }
 
@@ -20,9 +21,9 @@ export const initGoogleAnalytics = (measurementId) => {
 
 export const trackPageView = (path = window.location.pathname) => {
   const isLocalhost = window.location.hostname === "localhost";
-  const isDevelopment = process.env.NODE_ENV !== "production";
 
-  if (isLocalhost || isDevelopment) return;
+  // 🚫 Bloquer le tracking en local
+  if (isLocalhost) return;
 
   if (typeof window.gtag !== "function") {
     console.warn("⚠️ Google Analytics n'est pas chargé.");
@@ -35,21 +36,14 @@ export const trackPageView = (path = window.location.pathname) => {
 
 export const trackEvent = (action, category, label, value) => {
   const isLocalhost = window.location.hostname === "localhost";
-  const isDevelopment = process.env.NODE_ENV !== "production";
 
-  if (isLocalhost || isDevelopment) return;
+  // 🚫 Bloquer les événements en local
+  if (isLocalhost) return;
 
   if (typeof window.gtag !== "function") {
     console.warn("⚠️ Google Analytics n'est pas chargé.");
     return;
   }
-
-
-  if (window.location.hostname === "localhost") {
-    console.warn("Google Analytics désactivé en local");
-    window['ga-disable-G-72S8X47T2F'] = true; // Remplace par ton ID GA4
-  }
-  
 
   window.gtag("event", action, {
     event_category: category,

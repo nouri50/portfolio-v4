@@ -536,129 +536,65 @@ a {
 
 
 /* Projects Section */
-
-.projects-section {
-  padding: 2rem;
-  background-color: #f7f9fc;
-  text-align: center;
-}
-
-.section-title {
-  font-size: 2rem;
-  color: #1d3557;
-  margin-bottom: 2rem;
-}
-
 .projects-container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
+  gap: 15px; /* Réduction de l'espacement */
   justify-content: center;
-  gap: 2rem;
+  align-items: stretch;
+  margin-top: 20px;
 }
 
 .project-card {
-  background-color: #ffffff;
-  border: 1px solid #e0e0e0;
+  background: #fff;
   border-radius: 8px;
-  width: 300px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px; /* Réduction du padding */
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 1rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 95%; /* Réduction de la largeur */
+  max-width: 500px; /* Limitation de la taille */
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .project-image {
   width: 100%;
-  height: auto;
-  margin-bottom: 1rem;
-}
-
-.project-card h3 {
-  font-size: 1.5rem;
-  margin: 1rem 0;
-  color: #1d3557;
+  height: 160px; /* Réduction de la hauteur */
+  object-fit: cover;
+  border-radius: 6px;
 }
 
 .details-button {
-  background-color: #457b9d;
-  color: #ffffff;
+  background: #007bff;
+  color: white;
+  padding: 8px 12px; /* Réduction du padding */
   border: none;
   border-radius: 5px;
-  padding: 0.5rem 1rem;
-  margin: 1rem auto 0; /* Centrer le bouton */
   cursor: pointer;
-  font-size: 0.9rem;
-  transition: background-color 0.3s ease;
+  transition: background 0.3s ease;
+  margin-top: 8px; /* Réduction de l'espacement */
+  font-size: 0.9rem; /* Réduction de la taille du texte */
 }
 
 .details-button:hover {
-  background-color: #1d3557;
+  background: #0056b3;
 }
 
-.project-details {
-  margin-top: 1rem;
-  text-align: left;
-}
-
-.project-details p {
-  font-size: 1rem;
-  color: #333333;
-  margin-bottom: 1rem;
-}
-
-.technologies-icons {
-  margin-top: 1rem;
-  text-align: center;
-}
-
-.technologies-icons h4 {
-  font-size: 1rem;
-  color: #1d3557;
-  margin-bottom: 0.5rem;
-}
-
-.icons {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
-.icon {
-  font-size: 1.5rem;
-  color: #457b9d;
-}
-
-.github-link {
-  display: inline-block;
-  margin-top: 1rem;
-  color: #1d3557;
-  font-weight: bold;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.github-link:hover {
-  color: #457b9d;
-}
-
-.project-card.expanded {
-  min-height: 450px;
-}
-
-/* Responsive Design pour mobile */
+/* ✅ Responsive pour mobile */
 @media (max-width: 768px) {
+  .projects-container {
+    grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+  }
+
   .project-card {
-    width: 100%;
+    width: 90%; /* Ajustement pour mobile */
   }
 }
+
 
 /* Contact Section */
 /* Section Contact */

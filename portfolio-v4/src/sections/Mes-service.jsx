@@ -1,31 +1,47 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
+import { FaCode, FaSearch, FaHeadset } from "react-icons/fa";
 
 function Services() {
   const { t } = useTranslation();
 
   return (
-    <section id="services" className="section services fade-in" aria-label={t("servicesSection")}>
+    <section id="services" className="section services fade-in" aria-labelledby="services-title">
+      {/* ✅ SEO avec Helmet */}
       <Helmet>
-        <title>{t("servicesTitle")}</title>
+        <title>{t("servicesTitle")} - Nouri Morouche</title>
         <meta name="description" content={t("servicesDescription")} />
+        <meta property="og:title" content={t("servicesTitle")} />
+        <meta property="og:description" content={t("servicesDescription")} />
+        <meta property="og:url" content="https://nmoroucheportfolio.fr/services" />
+        <meta property="og:type" content="website" />
       </Helmet>
-      
-      <h2 className="section-title">{t("myServices")}</h2>
+
+      <h2 id="services-title" className="section-title">{t("myServices")}</h2>
+      <p className="section-description">{t("servicesDescription")}</p>
+
       <div className="services-container">
-        <div className="service-card">
-          <h3>{t("webDevelopment")}</h3>
+        {/* ✅ Service : Développement Web */}
+        <article className="service-card" aria-labelledby="web-dev-title">
+          <FaCode className="service-icon" />
+          <h3 id="web-dev-title">{t("webDevelopment")}</h3>
           <p>{t("webDevelopmentDesc")}</p>
-        </div>
-        <div className="service-card">
-          <h3>{t("seo")}</h3>
+        </article>
+
+        {/* ✅ Service : SEO */}
+        <article className="service-card" aria-labelledby="seo-title">
+          <FaSearch className="service-icon" />
+          <h3 id="seo-title">{t("seo")}</h3>
           <p>{t("seoDesc")}</p>
-        </div>
-        <div className="service-card">
-          <h3>{t("techSupport")}</h3>
+        </article>
+
+        {/* ✅ Service : Support Technique */}
+        <article className="service-card" aria-labelledby="tech-support-title">
+          <FaHeadset className="service-icon" />
+          <h3 id="tech-support-title">{t("techSupport")}</h3>
           <p>{t("techSupportDesc")}</p>
-        </div>
+        </article>
       </div>
     </section>
   );

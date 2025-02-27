@@ -1,9 +1,20 @@
 import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
 export default defineConfig({
+  plugins: [react()],
   server: {
-    port: 3000, // Mets le port que tu veux
-    open: true,  // Ouvre automatiquement le navigateur
+    port: 4000,
+    open: true,
+    strictPort: true,
+    historyApiFallback: true, // 🔥 Évite les erreurs 404 sur React Router
   },
-  plugins: [], // Ajoute ici tes plugins si besoin
+  preview: {
+    port: 3000,
+    historyApiFallback: true, // 🔥 Correction aussi en mode "preview"
+  },
+  build: {
+    outDir: "dist",
+    emptyOutDir: true,
+  },
 });

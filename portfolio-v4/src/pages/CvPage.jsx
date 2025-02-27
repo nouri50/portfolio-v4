@@ -1,30 +1,29 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import { ArrowLeft } from "react-feather";
+import { useTranslation } from "react-i18next";
+import "../Styles/CvPage.css";
 
 const CvPage = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="cv-page">
-      <div className="container">
-        <h2>{t("cvTitle")}</h2>
-        <p>{t("cvPreview")}</p>
+    <div className="cv-container">
+      <h2 className="cv-title">{t("cvPreview")}</h2>
 
-        <div className="cv-preview-container">
-          <iframe 
-            src="/assets/Cv-NouriMorouche.pdf" 
-            width="100%" 
-            height="600px" 
-            title="CV de Nouri Morouche"
-          ></iframe>
-        </div>
-
-        <div className="back-button">
-          <Link to="/" className="btn-secondary">{t("back")}</Link>
-        </div>
+      <div className="cv-fullscreen">
+        <iframe
+          className="cv-preview"
+          src="/assets/Cv-NouriMorouche.pdf" // ✅ Chemin correct
+          title={t("cvTitle")}
+          style={{ width: "100%", height: "90vh", border: "none" }} // 🔥 Largeur et hauteur adaptées
+        />
       </div>
-    </section>
+
+      <Link to="/" className="back-button">
+        <ArrowLeft size={18} /> {t("backToHome")}
+      </Link>
+    </div>
   );
 };
 
