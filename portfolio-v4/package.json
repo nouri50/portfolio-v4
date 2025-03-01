@@ -5,9 +5,10 @@
   "description": "Portfolio personnel développé avec React et Vite",
   "private": true,
   "scripts": {
-    "dev": "vite", 
+    "dev": "vite",
+    "preview": "vite preview",
     "build": "vite build",
-    "preview": "vite preview"
+    "postbuild": "node generate-sitemap.js"
   },
   "dependencies": {
     "i18next": "^23.16.8",
@@ -18,7 +19,8 @@
     "react-i18next": "^13.5.0",
     "react-icons": "^5.4.0",
     "react-router-dom": "^6.29.0",
-    "react-scroll": "^1.9.0"
+    "react-scroll": "^1.9.0",
+    "sitemap": "^8.0.0"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.4",
