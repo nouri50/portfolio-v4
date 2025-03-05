@@ -35,121 +35,167 @@ a {
 
 /* Header */
 /* Style global du header */
+/* ✅ Style général du header */
+/* ✅ HEADER */
+/* ✅ HEADER */
+/* ✅ HEADER */
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background-color: #004aad;
   padding: 10px 20px;
-  background-color: #0056b3;
-  color: white;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .header-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   width: 100%;
+  position: relative;
 }
 
 .header-logo {
-  height: 50px;
+  height: 40px;
+  margin-right: auto;
 }
 
+/* ✅ MENU DESKTOP */
 .header-nav {
+  flex: 1;
   display: flex;
-  gap: 20px;
+  justify-content: flex-end;
 }
 
 .header-nav ul {
   display: flex;
   gap: 20px;
+  list-style: none;
+  padding: 0;
 }
 
-.header-nav li {
-  list-style: none;
+.header-nav ul li {
+  display: inline-block;
 }
 
 .header-nav a {
-  text-decoration: none;
   color: white;
-  font-size: 1rem;
-  transition: color 0.3s ease;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .header-nav a:hover {
   color: #ffcc00;
 }
 
-/* Menu burger */
+/* ✅ LANGUE EN MODE DESKTOP */
+.language-switcher-desktop {
+  margin-left: 20px;
+}
+
+.language-switcher-desktop button {
+  background: white;
+  color: #004aad;
+  border: 1px solid #004aad;
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.language-switcher-desktop button.active {
+  background: #ffcc00;
+}
+
+/* ✅ MENU BURGER */
 .burger-menu {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 24px;
   background: none;
   border: none;
+  font-size: 24px;
+  color: white;
+  display: none;
   cursor: pointer;
   position: absolute;
-  top: 50%;
   right: 20px;
-  transform: translateY(-50%);
 }
 
-.burger-line {
-  width: 30px;
-  height: 3px;
-  background-color: white;
-  border-radius: 2px;
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
+  .burger-menu {
+    display: block;
+  }
+
   .header-nav {
     display: none;
-    flex-direction: column;
-    background-color: #0056b3;
-    position: absolute;
-    top: 60px; /* Ajusté pour éviter de chevaucher le header */
-    right: 10px; /* Alignement à droite */
-    width: auto; /* Pour s'adapter au contenu */
-    padding: 10px;
-    gap: 10px;
-    border-radius: 5px; /* Ajout de coins arrondis */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Effet d'ombre */
   }
 
-  .header-nav.open {
-    display: flex;
-  }
-
-  .burger-menu {
-    display: flex;
-  }
-}
-.language-switcher-mobile {
-  display: none; /* Caché par défaut */
-}
-
-/* ✅ Affiche le sélecteur de langue uniquement si le menu burger est ouvert */
-.header-nav.open .language-switcher-mobile {
-  display: block;
-  text-align: center;
-  margin-top: 10px;
-}
-
-/* ✅ Sélecteur de langue visible en desktop (hors du menu burger) */
-.language-switcher-desktop {
-  display: block;
-}
-
-/* ✅ En mode mobile, cache le sélecteur en dehors du menu */
-@media (max-width: 768px) {
   .language-switcher-desktop {
     display: none;
   }
+}
+
+/* ✅ MENU MOBILE */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  background: #004aad;
+  color: white;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.mobile-menu ul li {
+  padding: 10px 0;
+}
+
+.mobile-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.mobile-menu a:hover {
+  color: #ffcc00;
+}
+
+/* ✅ BOUTON FERMETURE MENU */
+.close-menu {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+/* ✅ LANGUE EN MODE MOBILE */
+.language-switcher-mobile {
+  margin-top: 20px;
+}
+
+.language-switcher-mobile button {
+  background: white;
+  color: #004aad;
+  border: 1px solid white;
+  padding: 5px 10px;
+  margin: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.language-switcher-mobile button.active {
+  background: #ffcc00;
 }
 
 

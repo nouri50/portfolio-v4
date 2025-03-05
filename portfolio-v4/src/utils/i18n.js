@@ -97,6 +97,13 @@ const resources = {
          faqCookiesAnswer: "Les cookies sont utilisés pour collecter des informations de manière anonyme et analyser les tendances du site.",
    
          backToHome: "Retour à l'accueil",
+
+         // 🔹 Bannière Cookies
+      cookieTitle: "Nous respectons votre vie privée",
+      cookieMessage: "Ce site utilise des cookies uniquement pour analyser le trafic et améliorer votre expérience utilisateur.",
+      acceptCookies: "Accepter",
+      refuseCookies: "Refuser",
+
     }
   },
   en: {
@@ -195,6 +202,12 @@ const resources = {
        faqCookiesAnswer: "Cookies are used to collect information anonymously and analyze site trends.",
  
        backToHome: "Back to Home",
+
+           // 🔹 Cookie Banner
+      cookieTitle: "We respect your privacy",
+      cookieMessage: "This site uses cookies only to analyze traffic and improve your user experience.",
+      acceptCookies: "Accept",
+      refuseCookies: "Decline",
 
           
 

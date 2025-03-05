@@ -14,6 +14,7 @@ import NotFound from "./pages/NotFound"; // ✅ Import de la page 404
 import CvPage from "./pages/CvPage";  // ✅ Ajout de la page CV
 import "./reset/index.css";
 import "./Styles/global.css";
+import CookieBanner from "./utils/CookieBanner"; 
 
 const App = () => {
   const { t, i18n } = useTranslation();
@@ -111,6 +112,7 @@ const App = () => {
       </Helmet>
 
       <Header />
+      <CookieBanner />  {/* ✅ Affichage de la bannière de cookies */}
       <main>
         <Routes>
           {/* ✅ Navigation scrollable en une seule page */}

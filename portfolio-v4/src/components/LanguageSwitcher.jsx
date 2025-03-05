@@ -1,30 +1,20 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import "../Styles/LanguageSwitcher.css";
 
-const LanguageSwitcher = () => {
+function LanguageSwitcher() {
   const { i18n } = useTranslation();
 
-  const changeLanguage = (lng) => {
-    if (i18n?.changeLanguage) {
-      i18n.changeLanguage(lng);
-      localStorage.setItem("language", lng);
-      console.log("Langue changée en :", lng);
-    } else {
-      console.error("Erreur: i18n.changeLanguage n'est pas disponible.");
-    }
+  const changeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+    localStorage.setItem("language", lang);
   };
 
   return (
     <div className="language-switcher">
-      <button className="lang-btn" onClick={() => changeLanguage("fr")} aria-label="Changer la langue en Français">
-        🇫🇷 FR
-      </button>
-      <button className="lang-btn" onClick={() => changeLanguage("en")} aria-label="Switch to English">
-        🇬🇧 EN
-      </button>
+      <button onClick={() => changeLanguage("fr")} className={i18n.language === "fr" ? "active" : ""}>FR</button>
+      <button onClick={() => changeLanguage("en")} className={i18n.language === "en" ? "active" : ""}>EN</button>
     </div>
   );
-};
+}
 
 export default LanguageSwitcher;

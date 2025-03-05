@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next"; // 🔥 Importation pour la traduction
 import "../Styles/CookieBanner.css";
 
 const CookieBanner = () => {
+  const { t } = useTranslation(); // 🔥 Utilisation de la traduction
   const [isVisible, setIsVisible] = useState(false);
 
   // Afficher la bannière si aucun consentement n'est donné
@@ -35,17 +37,14 @@ const CookieBanner = () => {
 
   return (
     <div className="cookie-banner" role="dialog" aria-labelledby="cookie-banner-title">
-      <h2 id="cookie-banner-title">Nous respectons votre vie privée</h2>
-      <p>
-        Ce site utilise des cookies uniquement pour analyser le trafic et améliorer votre expérience utilisateur.
-        En continuant, vous acceptez leur utilisation.
-      </p>
+      <h2 id="cookie-banner-title">{t("cookieTitle")}</h2>
+      <p>{t("cookieMessage")}</p>
       <div className="cookie-buttons">
         <button className="accept-button" onClick={handleAccept}>
-          Accepter
+          {t("acceptCookies")}
         </button>
         <button className="refuse-button" onClick={handleRefuse}>
-          Refuser
+          {t("refuseCookies")}
         </button>
       </div>
     </div>
