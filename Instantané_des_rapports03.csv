@@ -1,0 +1,192 @@
+# ----------------------------------------
+# Instantané des rapports
+# Compte : portflio
+# Propriété : morouche
+# ----------------------------------------
+#  
+# Date de début : 20250206
+# Date de fin : 20250305
+Nième jour,Utilisateurs actifs
+0000,3
+0001,0
+0002,0
+0003,1
+0004,1
+0005,0
+0006,0
+0007,0
+0008,0
+0009,0
+0010,0
+0011,0
+0012,0
+0013,0
+0014,0
+0015,1
+0016,0
+0017,1
+0018,0
+0019,1
+0020,0
+0021,0
+0022,1
+0023,0
+0024,2
+0025,0
+0026,0
+0027,4
+
+# Date de début : 20250206
+# Date de fin : 20250305
+Nième jour,Nouveaux utilisateurs
+0000,2
+0001,0
+0002,0
+0003,1
+0004,1
+0005,0
+0006,0
+0007,0
+0008,0
+0009,0
+0010,0
+0011,0
+0012,0
+0013,0
+0014,0
+0015,1
+0016,0
+0017,0
+0018,0
+0019,1
+0020,0
+0021,0
+0022,1
+0023,0
+0024,2
+0025,0
+0026,0
+0027,5
+
+# Date de début : 20250206
+# Date de fin : 20250305
+Nième jour,Durée d'engagement moyenne par utilisateur actif
+0000,18
+0001,0
+0002,0
+0003,0
+0004,0
+0005,0
+0006,0
+0007,0
+0008,0
+0009,0
+0010,0
+0011,0
+0012,0
+0013,0
+0014,0
+0015,0
+0016,0
+0017,49
+0018,0
+0019,0
+0020,0
+0021,0
+0022,0
+0023,0
+0024,0
+0025,0
+0026,0
+0027,27.25
+
+# Date de début : 20250206
+# Date de fin : 20250305
+Nième jour,Revenu total
+0000,0
+0001,0
+0002,0
+0003,0
+0004,0
+0005,0
+0006,0
+0007,0
+0008,0
+0009,0
+0010,0
+0011,0
+0012,0
+0013,0
+0014,0
+0015,0
+0016,0
+0017,0
+0018,0
+0019,0
+0020,0
+0021,0
+0022,0
+0023,0
+0024,0
+0025,0
+0026,0
+0027,0
+
+#  
+# Date de début : 20250206
+# Date de fin : 20250305
+Identifiant du pays,Utilisateurs actifs
+DE,3
+FR,10
+US,2
+
+# Date de début : 20250206
+# Date de fin : 20250305
+Pays,Utilisateurs actifs
+FR,10
+DE,3
+US,2
+
+# Quelles sont les tendances des utilisateurs actifs ?
+# Date de début : 20250206
+# Date de fin : 20250305
+Nième jour,30 jours,7 jours,1 jour
+0000,34,28,3
+0001,34,28,0
+0002,34,16,0
+0003,35,16,1
+0004,36,5,1
+0005,36,5,0
+0006,36,5,0
+0007,36,2,0
+0008,36,2,0
+0009,36,2,0
+0010,36,1,0
+0011,36,0,0
+0012,36,0,0
+0013,36,0,0
+0014,36,0,0
+0015,37,1,1
+0016,37,1,0
+0017,37,2,1
+0018,37,2,0
+0019,37,3,1
+0020,37,3,0
+0021,35,3,0
+0022,35,3,1
+0023,33,3,0
+0024,35,4,2
+0025,23,4,0
+0026,22,3,0
+0027,15,7,4
+
+# D'où provient votre valeur vie (LTV) ?
+# Date de début : 20250206
+# Date de fin : 20250305
+Groupe de canaux principal du premier utilisateur (Groupe de canaux par défaut),Valeur moyenne sur 120 j
+
+
+# Quelle est l'activité des utilisateurs sur les différentes plates-formes ?
+# Date de début : 20250206
+# Date de fin : 20250305
+Plate-forme,Événements clés
