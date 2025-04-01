@@ -10,8 +10,14 @@ function LandingPage() {
   return (
     <section id="landing-page" className="landing-page" aria-label={t("landingSection")}>
       <Helmet>
-        <title>{t("welcome")} - Nouri Morouche</title>
-        <meta name="description" content={t("description")} />
+        <title>Portfolio Développeur Web | Nouri Morouche</title>
+        <meta name="description" content="Bienvenue sur le portfolio de Nouri Morouche, développeur web spécialisé en React, Symfony et MySQL." />
+        <link rel="canonical" href="https://nmoroucheportfolio.fr/#landing-page" />
+        <meta property="og:title" content="Portfolio Développeur Web | Nouri Morouche" />
+        <meta property="og:description" content="Découvrez mon portfolio et mes projets en développement web fullstack." />
+        <meta property="og:image" content="https://nmoroucheportfolio.fr/assets/portfolio-thumbnail.png" />
+        <meta property="og:url" content="https://nmoroucheportfolio.fr/#landing-page" />
+        <meta property="og:type" content="website" />
       </Helmet>
 
       <div className="landing-content">
@@ -20,13 +26,13 @@ function LandingPage() {
         <p className="landing-description">{t("description")}</p>
 
         <div className="social-buttons">
-          <a href="https://www.linkedin.com/in/nouri-morouche-9a8237140/" className="social-button linkedin" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/nouri-morouche-9a8237140/" className="social-button linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <FaLinkedin />
           </a>
-          <a href="https://github.com/nouri50" className="social-button github" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/nouri50" className="social-button github" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <FaGithub />
           </a>
-          <a href="https://www.facebook.com/profile.php?id=61569434236598" className="social-button facebook" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.facebook.com/profile.php?id=61569434236598" className="social-button facebook" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
             <FaFacebook />
           </a>
         </div>

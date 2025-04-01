@@ -30,11 +30,16 @@ function Contact() {
   return (
     <section id="contact" className="section contact fade-in" aria-label={t("contactSection")}>
       <Helmet>
-        <title>{t("contactTitle")}</title>
-        <meta name="description" content={t("contactDescription")} />
+        <title>Portfolio Développeur Web | Nouri Morouche</title>
+        <meta name="description" content="Contactez Nouri Morouche, développeur web, pour vos projets en React, Symfony et MySQL." />
+        <link rel="canonical" href="https://nmoroucheportfolio.fr/#contact" />
+        <meta property="og:title" content="Portfolio Développeur Web | Nouri Morouche" />
+        <meta property="og:description" content="Contactez Nouri Morouche pour vos besoins en développement web fullstack." />
+        <meta property="og:image" content="https://nmoroucheportfolio.fr/assets/portfolio-thumbnail.png" />
+        <meta property="og:url" content="https://nmoroucheportfolio.fr/#contact" />
+        <meta property="og:type" content="website" />
       </Helmet>
 
-      {/* 🔹 Correction de l'affichage du titre */}
       <h2 className="section-title">{t("contactTitle")}</h2> 
 
       <form className="contact-form" onSubmit={handleSubmit}>

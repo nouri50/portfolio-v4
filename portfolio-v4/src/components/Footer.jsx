@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next"; 
+import { useTranslation } from "react-i18next";
 import { FaLinkedin, FaGithub, FaFacebook } from "react-icons/fa";
 
 function Footer() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -13,10 +13,6 @@ function Footer() {
 
     return () => clearTimeout(timer);
   }, []);
-
-  // 🔥 Vérifie que la traduction est bien chargée
-  console.log("Langue actuelle :", i18n.language);
-  console.log("Traduction du footer :", t("allRightsReserved"));
 
   return (
     <footer className={`footer fade-in ${isVisible ? "show" : ""}`}>

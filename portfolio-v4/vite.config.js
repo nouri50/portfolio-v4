@@ -3,15 +3,15 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
+  base: "./", // ✅ Important pour éviter le 404 lors du serve -s dist
   server: {
     port: 4000,
     open: true,
     strictPort: true,
-    historyApiFallback: true, // 🔥 Évite les erreurs 404 sur React Router
+    historyApiFallback: true, // ✅ Pas nécessaire avec Vite mais OK pour du preview custom
   },
   preview: {
     port: 3000,
-    historyApiFallback: true, // 🔥 Correction aussi en mode "preview"
   },
   build: {
     outDir: "dist",

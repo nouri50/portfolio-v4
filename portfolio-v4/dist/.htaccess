@@ -1,15 +1,10 @@
-# ==============================
-# ✅ FORCER HTTPS
-# ==============================
+# Forcer HTTPS
 <IfModule mod_rewrite.c>
-    RewriteEngine On
     RewriteCond %{HTTPS} !=on
     RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 </IfModule>
 
-# ==============================
-# ✅ ROUTING POUR SINGLE PAGE APP (SPA)
-# ==============================
+# Gestion des routes SPA (Single Page App)
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /
@@ -19,9 +14,7 @@
     RewriteRule . /index.html [L]
 </IfModule>
 
-# ==============================
-# ✅ MISE EN CACHE DES FICHIERS
-# ==============================
+# Mise en cache améliorée pour performances
 <IfModule mod_expires.c>
     ExpiresActive On
     ExpiresByType text/html "access plus 0 seconds"
@@ -34,45 +27,26 @@
     ExpiresByType application/font-woff2 "access plus 1 year"
 </IfModule>
 
-# ==============================
-# ✅ COMPRESSION DES FICHIERS
-# ==============================
+# Compression des fichiers
 <IfModule mod_deflate.c>
     AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json
     AddOutputFilterByType DEFLATE application/xml application/xhtml+xml application/rss+xml application/font-woff application/font-woff2
 </IfModule>
 
-# ==============================
-# ✅ SÉCURITÉ : PROTECTION DES EN-TÊTES
-# ==============================
+# Sécurité renforcée
 <IfModule mod_headers.c>
+    Header always set X-Frame-Options "DENY"
     Header always set X-Content-Type-Options "nosniff"
     Header always set X-XSS-Protection "1; mode=block"
     Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
 </IfModule>
 
-# ==============================
-# ✅ CORRECTION DU PROBLÈME X-Frame-Options: DENY
-# ==============================
-<IfModule mod_headers.c>
-    Header always unset X-Frame-Options
-</IfModule>
-
-# 🔥 Si tu veux autoriser **TOUS les sites** à afficher ton site en iframe (⚠️ Risque de sécurité)
-# <IfModule mod_headers.c>
-#     Header always set Content-Security-Policy "frame-ancestors *;"
-# </IfModule>
-
-# ==============================
-# ✅ PROTECTION DES FICHIERS SENSIBLES
-# ==============================
+# Protection des fichiers système
 <FilesMatch "(^\.htaccess|\.env|config\.php|database\.yml)">
     Require all denied
 </FilesMatch>
 
-# ==============================
-# ✅ CORRECTION POUR CORS (SI BESOIN)
-# ==============================
+# CORS : autoriser les fichiers spécifiques
 <IfModule mod_headers.c>
     <FilesMatch "\.(json|svg|ttf|otf|woff|woff2)$">
         Header set Access-Control-Allow-Origin "*"

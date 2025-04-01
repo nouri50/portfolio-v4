@@ -1,35 +1,81 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <title>Portfolio Développeur Web | Nouri Morouche</title>
 
-    <title>Portfolio de Nouri Morouche</title>
-    
-    <!-- ✅ Icônes et SEO -->
-    <meta name="description" content="Portfolio de Nouri Morouche, développeur web spécialisé en React, Symfony et MySQL." />
-    <meta name="keywords" content="Nouri Morouche, développeur web, React, Symfony, MySQL" />
-    <meta name="author" content="Nouri Morouche" />
-    
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+  <!-- SEO -->
+  <meta name="description" content="Portfolio de Nouri Morouche, développeur web React, Symfony et MySQL. Découvrez ses projets, services et parcours." />
+  <meta name="keywords" content="Portfolio développeur web, Nouri Morouche, React, Symfony, MySQL, développement web" />
+  <meta name="author" content="Nouri Morouche" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://nmoroucheportfolio.fr/" />
 
-    <!-- ✅ Google Analytics (optionnel, activé uniquement en production) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-72S8X47T2F"></script>
-    <script>
-      if (window.location.hostname !== "localhost") {
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag("js", new Date());
-        gtag("config", "G-72S8X47T2F");
-      }
-    </script>
-    <script type="module" crossorigin src="/assets/index-DQNQM45n.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-RRGF7o8s.css">
-  </head>
-  <body>
-    <div id="root"></div>
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Portfolio Développeur Web | Nouri Morouche" />
+  <meta property="og:description" content="Développeur web React & Symfony, projets, services et parcours." />
+  <meta property="og:image" content="https://nmoroucheportfolio.fr/portfolio-thumbnail.png" />
+  <meta property="og:url" content="https://nmoroucheportfolio.fr/" />
+  <meta property="og:type" content="website" />
 
-  </body>
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Portfolio Développeur Web | Nouri Morouche" />
+  <meta name="twitter:description" content="Découvrez mes projets web réalisés avec React, Symfony, MySQL." />
+  <meta name="twitter:image" content="https://nmoroucheportfolio.fr/portfolio-thumbnail.png" />
+
+  <!-- Données structurées JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Nouri Morouche",
+    "url": "https://nmoroucheportfolio.fr/",
+    "image": "https://nmoroucheportfolio.fr/portfolio-thumbnail.png",
+    "jobTitle": "Développeur Web",
+    "sameAs": [
+      "https://www.linkedin.com/in/nouri-morouche-9a8237140",
+      "https://github.com/nouri50",
+      "https://www.facebook.com/profile.php?id=61569434236598"
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" />
+  <link rel="icon" type="image/png" href="./favicon-96x96.png" />
+
+  <!-- ✅ Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TWT9DVNF');
+  </script>
+
+  <!-- ✅ Google Analytics en secours si GTM absent -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-72S8X47T2F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-72S8X47T2F', { anonymize_ip: true });
+  </script>
+  <script type="module" crossorigin src="./assets/index-BcTMAodV.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-B1b69T9y.css">
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TWT9DVNF"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div id="root"></div>
+</body>
 </html>

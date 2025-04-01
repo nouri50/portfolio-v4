@@ -4,8 +4,13 @@ import { useTranslation } from "react-i18next";
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs } from "react-icons/fa";
 import { SiSymfony, SiMysql, SiFigma, SiGit } from "react-icons/si";
 
-function Parcours() {
+const Parcours = () => {
   const { t } = useTranslation();
+
+  const isLocal = window.location.hostname === "localhost";
+  const cvPreview = isLocal
+    ? "/assets/Cv-NouriMorouche.pdf"
+    : "https://nmoroucheportfolio.fr/assets/Cv-NouriMorouche.pdf";
 
   const parcours = [
     {
@@ -42,23 +47,22 @@ function Parcours() {
     { name: "Git", icon: <SiGit size={30} color="#F05032" /> },
   ];
 
-  const cvPreview = "/assets/Cv-NouriMorouche.pdf";
-
   return (
-    <section id="parcours" className="section parcours" aria-labelledby="parcours-title">
+    <section id="parcour" className="section parcour fade-in" aria-label={t("parcourSection")}>
       <Helmet>
-        <title>{t("parcours")} - Nouri Morouche</title>
-        <meta name="description" content="Mon parcours professionnel et mes compétences en développement web." />
-        <meta property="og:title" content="Mon Parcours - Nouri Morouche" />
-        <meta property="og:description" content="Découvrez mon expérience et mes compétences en développement web." />
-        <meta property="og:url" content="https://nmoroucheportfolio.fr/parcours" />
+        <title>Portfolio Développeur Web | Nouri Morouche</title>
+        <meta name="description" content="Découvrez mon parcours en tant que développeur web fullstack React, Symfony et MySQL." />
+        <link rel="canonical" href="https://nmoroucheportfolio.fr/#parcour" />
+        <meta property="og:title" content="Portfolio Développeur Web | Nouri Morouche" />
+        <meta property="og:description" content="Découvrez mon parcours professionnel dans le développement web et mes compétences techniques." />
+        <meta property="og:image" content="https://nmoroucheportfolio.fr/assets/portfolio-thumbnail.png" />
+        <meta property="og:url" content="https://nmoroucheportfolio.fr/#parcour" />
         <meta property="og:type" content="website" />
       </Helmet>
 
       <div className="container">
-        {/* 📌 Section Expérience et Formation */}
         <article className="card parcours">
-          <h2 id="parcours-title">{t("parcours")}</h2>
+          <h2>{t("parcours")}</h2>
           <div className="parcours-content">
             {parcours.map((section, index) => (
               <div key={index} className="parcours-section">
@@ -75,15 +79,15 @@ function Parcours() {
           </div>
         </article>
 
-        {/* 📌 Section Aperçu du CV */}
         <article className="cv-section">
           <h2>{t("cvTitle")}</h2>
           <p>{t("cvPreview")}</p>
           <iframe 
             src={cvPreview} 
-            className="cv-preview" 
+            className="cv-preview"
             title="Aperçu du CV de Nouri Morouche"
             loading="lazy"
+            style={{ width: "100%", height: "500px", border: "none" }}
           ></iframe>
           <div className="cv-buttons">
             <a href={cvPreview} download="NouriMorouche_CV.pdf" className="btn-download">
@@ -95,7 +99,6 @@ function Parcours() {
           </div>
         </article>
 
-        {/* 📌 Section Technologies maîtrisées */}
         <article className="card technologies">
           <h2>{t("technologies")}</h2>
           <div className="tech-grid">
@@ -110,6 +113,6 @@ function Parcours() {
       </div>
     </section>
   );
-}
+};
 
 export default Parcours;
