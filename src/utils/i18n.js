@@ -13,7 +13,7 @@ const resources = {
 
       // 🔹 Projets
       projectsTitle: "Mes Projets",
-      portfolio: "Portfolio Personnel",
+      portfolio: "1er version portfolio",
       portfolioDesc: "Un portfolio moderne et interactif pour présenter mes compétences et projets.",
       blog: "Blog Communautaire",
       blogDesc: "Un blog interactif pour publier et commenter des articles.",
@@ -119,7 +119,7 @@ const resources = {
 
       // 🔹 Projects
       projectsTitle: "My Projects",
-      portfolio: "Personal Portfolio",
+      portfolio: "1st version of the portfolio",
       portfolioDesc: "A modern and interactive portfolio to showcase my skills and projects.",
       blog: "Community Blog",
       blogDesc: "An interactive blog to publish and comment on articles.",
@@ -226,14 +226,22 @@ const resources = {
 };
 
 i18n
-  .use(initReactI18next) // 📌 Connexion à react-i18next
+  .use(initReactI18next)
   .init({
     resources,
-    lng: "fr", // ✅ Langue par défaut en français
-    fallbackLng: "fr", // ✅ Si une langue n'est pas disponible, revenir au français
-    interpolation: {
-      escapeValue: false, // ✅ Pas nécessaire pour React
+    fallbackLng: "fr", // par défaut
+    supportedLngs: ["fr", "en"], // 🔒 On bloque toutes les autres langues
+    detection: {
+      order: ["localStorage", "navigator"],
+      caches: ["localStorage"],
     },
+    nonExplicitSupportedLngs: true, // pour gérer "fr-FR", "en-US", etc.
+    interpolation: {
+      escapeValue: false
+    }
   });
 
 export default i18n;
+
+
+
