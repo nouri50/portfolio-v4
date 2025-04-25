@@ -103,6 +103,8 @@ const resources = {
       cookieMessage: "Ce site utilise des cookies uniquement pour analyser le trafic et améliorer votre expérience utilisateur.",
       acceptCookies: "Accepter",
       refuseCookies: "Refuser",
+       cvNotVisible: "Si le CV ne s'affiche pas correctement,",
+      cvAdobeExtension: "désactivez temporairement votre extension Adobe ou ouvrez-le dans un nouvel onglet."
 
     }
   },
@@ -208,6 +210,14 @@ const resources = {
       cookieMessage: "This site uses cookies only to analyze traffic and improve your user experience.",
       acceptCookies: "Accept",
       refuseCookies: "Decline",
+       cvNotVisible: "If the CV does not display properly,",
+        cvAdobeExtension: "temporarily disable your Adobe extension or open it in a new tab."
+      
+      
+      
+       
+      
+      
 
           
 

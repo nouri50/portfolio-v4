@@ -9,8 +9,8 @@ const Parcours = () => {
 
   const isLocal = window.location.hostname === "localhost";
   const cvPreview = isLocal
-    ? "/assets/Cv-NouriMorouche.pdf"
-    : "https://nmoroucheportfolio.fr/assets/Cv-NouriMorouche.pdf";
+  ? "/assets/NouriMorouche_CV.pdf"
+  : "https://nmoroucheportfolio.fr/assets/NouriMorouche_CV.pdf";
 
   const parcours = [
     {
@@ -48,19 +48,33 @@ const Parcours = () => {
   ];
 
   return (
-    <section id="parcour" className="section parcour fade-in" aria-label={t("parcourSection")}>
+    <section
+      id="parcour"
+      className="section parcour fade-in"
+      aria-label={t("parcourSection")}
+    >
       <Helmet>
         <title>Portfolio Développeur Web | Nouri Morouche</title>
-        <meta name="description" content="Découvrez mon parcours en tant que développeur web fullstack React, Symfony et MySQL." />
+        <meta
+          name="description"
+          content="Découvrez mon parcours en tant que développeur web fullstack React, Symfony et MySQL."
+        />
         <link rel="canonical" href="https://nmoroucheportfolio.fr/#parcour" />
         <meta property="og:title" content="Portfolio Développeur Web | Nouri Morouche" />
-        <meta property="og:description" content="Découvrez mon parcours professionnel dans le développement web et mes compétences techniques." />
-        <meta property="og:image" content="https://nmoroucheportfolio.fr/assets/portfolio-thumbnail.png" />
+        <meta
+          property="og:description"
+          content="Découvrez mon parcours professionnel dans le développement web et mes compétences techniques."
+        />
+        <meta
+          property="og:image"
+          content="https://nmoroucheportfolio.fr/assets/portfolio-thumbnail.png"
+        />
         <meta property="og:url" content="https://nmoroucheportfolio.fr/#parcour" />
         <meta property="og:type" content="website" />
       </Helmet>
 
       <div className="container">
+        {/* Parcours */}
         <article className="card parcours">
           <h2>{t("parcours")}</h2>
           <div className="parcours-content">
@@ -79,26 +93,38 @@ const Parcours = () => {
           </div>
         </article>
 
-        <article className="cv-section">
-          <h2>{t("cvTitle")}</h2>
-          <p>{t("cvPreview")}</p>
-          <iframe 
-            src={cvPreview} 
-            className="cv-preview"
-            title="Aperçu du CV de Nouri Morouche"
-            loading="lazy"
-            style={{ width: "100%", height: "500px", border: "none" }}
-          ></iframe>
-          <div className="cv-buttons">
-            <a href={cvPreview} download="NouriMorouche_CV.pdf" className="btn-download">
-              📄 {t("downloadCV")}
-            </a>
-            <a href="/cv" className="btn-view">
-              🔍 {t("viewFullCV")}
-            </a>
-          </div>
-        </article>
+       {/* 📌 Section Aperçu du CV */}
+<article className="cv-section">
+  <h2>{t("cvTitle")}</h2>
+  <p>{t("cvPreview")}</p>
 
+  <iframe 
+    src={cvPreview} 
+    className="cv-preview"
+    title="Aperçu du CV de Nouri Morouche"
+    loading="lazy"
+    style={{ width: "100%", height: "500px", border: "none" }}
+  ></iframe>
+
+  <div className="cv-buttons">
+    <a
+      href={cvPreview}
+      download="NouriMorouche_CV.pdf"
+      className="btn-download"
+    >
+      📄 {t("downloadCV")}
+    </a>
+    <a
+      href="/cv"
+      className="btn-view"
+    >
+      🔍 {t("viewFullCV")}
+    </a>
+  </div>
+</article>
+
+
+        {/* Technologies */}
         <article className="card technologies">
           <h2>{t("technologies")}</h2>
           <div className="tech-grid">

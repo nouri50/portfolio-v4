@@ -55,3 +55,18 @@
 .back-button:hover {
   text-decoration: underline;
 }
+
+.cv-warning {
+  background-color: #fff8db;
+  color: #856404;
+  border: 1px solid #ffeeba;
+  padding: 10px 20px;
+  margin: 20px auto;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  max-width: 800px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+

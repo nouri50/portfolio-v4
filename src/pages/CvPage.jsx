@@ -8,47 +8,61 @@ import "../Styles/CvPage.css";
 const CvPage = () => {
   const { t } = useTranslation();
 
-  // 📌 Détecter si on est en local ou en production
+  // ✅ Détection de l'environnement
   const isLocal = window.location.hostname === "localhost";
   const cvPreview = isLocal
-    ? "/assets/Cv-NouriMorouche.pdf" // ✅ En local
-    : "https://nmoroucheportfolio.fr/assets/Cv-NouriMorouche.pdf"; // ✅ En production
+    ? "/assets/NouriMorouche_CV.pdf"
+    : "https://nmoroucheportfolio.fr/assets/NouriMorouche_CV.pdf";
 
   return (
     <div className="cv-container">
-      {/* 📌 SEO & Métadonnées */}
+      {/* ✅ SEO */}
       <Helmet>
-        <title>{t("cvTitle")} - Nouri Morouche</title>
+        <title>Portfolio Développeur Web | Nouri Morouche</title>
         <meta name="description" content="Découvrez mon CV en ligne et téléchargez-le en format PDF." />
         <meta property="og:title" content="CV - Nouri Morouche" />
         <meta property="og:description" content="Consultez et téléchargez mon CV de développeur web." />
-        <meta property="og:image" content="https://nmoroucheportfolio.fr/assets/cv-thumbnail.jpg" />
-        <meta property="og:url" content={cvPreview} />
+        <meta property="og:image" content="https://nmoroucheportfolio.fr/assets/portfolio-thumbnail.png" />
+        <meta property="og:url" content="https://nmoroucheportfolio.fr/cv" />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://nmoroucheportfolio.fr/cv" />
       </Helmet>
 
-      {/* 📌 Titre */}
+      {/* ✅ Titre */}
       <h2 className="cv-title">{t("cvPreview")}</h2>
 
-      {/* 📌 Aperçu du CV */}
+      {/* ✅ Aperçu dans iframe */}
       <div className="cv-fullscreen">
         <iframe
           className="cv-preview"
           src={cvPreview}
-          title={t("cvTitle")}
+          title="CV - Nouri Morouche"
           style={{ width: "100%", height: "90vh", border: "none" }}
           loading="lazy"
         />
       </div>
 
-      {/* 📌 Boutons */}
+      {/* ✅ Boutons */}
       <div className="cv-buttons">
-        <a href={cvPreview} download="NouriMorouche_CV.pdf" className="btn-download">
+        <a
+          href={cvPreview}
+          download="NouriMorouche_CV.pdf"
+          className="btn-download"
+        >
           📄 {t("downloadCV")}
         </a>
         <Link to="/" className="back-button">
           <ArrowLeft size={18} /> {t("backToHome")}
         </Link>
       </div>
+
+      {/* ✅ Message optionnel si le PDF ne s'affiche pas */}
+      <p className="cv-warning">
+        {t("cvNotVisible")}{" "}
+        <strong>
+          {t("cvAdobeExtension")}
+        </strong>
+      </p>
     </div>
   );
 };
