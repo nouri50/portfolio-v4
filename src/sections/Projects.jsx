@@ -7,7 +7,7 @@ import project1Image from "../image/gestionnaire_des_tache_comp.webp";
 import project2Image from "../image/portfolio.webp";
 import project3Image from "../image/blog.webp";
 import project4Image from "../image/site_ecommerce-jeuxvideo.png"; // Image fictive pour le projet e-commerce
-
+import project5Image from "../image/miniblog.png"
 const Projects = () => {
   const { t } = useTranslation();
   const [activeProject, setActiveProject] = useState(null);
@@ -64,6 +64,22 @@ const Projects = () => {
       image: project4Image,
       githubLink: null
     },
+
+{
+  id: 5,
+  title: t("MiniBlog (TP CDA)"),
+  description: t("miniblogDesc"),
+  technologies: [
+    { name: "HTML" },
+    { name: "JavaScript" },
+    { name: "Bootstrap" }
+  ],
+  image: project5Image, // remplace par une image réelle si dispo
+  githubLink: "https://github.com/nouri50/cda-mini-blog",
+
+}
+
+
   ];
 
   return (

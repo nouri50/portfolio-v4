@@ -26,6 +26,9 @@ const resources = {
       technologiesUsed: "Technologies utilisées",
       viewOnGithub: "Voir sur GitHub",
       notAvailable: "Non disponible",
+      miniblog: "MiniBlog (TP CDA)",
+      miniblogDesc: "Application web simulant un mini-blog avec API fictive. Ajout et suppression de posts, pagination, recherche, thème clair/sombre.",
+
 
       // 🔹 Services
       myServices: "Mes Services",
@@ -66,44 +69,44 @@ const resources = {
       backToHome: "Retour à l'accueil",
 
       // 🔹 Footer
-     allRightsReserved: "Tous droits réservés.",
+      allRightsReserved: "Tous droits réservés.",
       privacyPolicy: "Politique de confidentialité",
-         // 🔹 Politique de Confidentialité
-         privacyPolicyTitle: "Politique de Confidentialité",
-         privacyPolicyDescription: "Découvrez notre politique de confidentialité concernant l'utilisation des cookies et Google Analytics.",
-         privacyPolicyIntro: "Votre confidentialité est importante pour nous. Nous utilisons Google Analytics pour analyser l’audience de notre site de manière anonyme.",
-   
-         dataCollected: "1. Données collectées",
-         dataCollectedPages: "Pages visitées",
-         dataCollectedTime: "Durée des visites",
-         dataCollectedDevice: "Type d’appareil utilisé",
-   
-         dataUsage: "2. Utilisation des données",
-         dataUsageDescription: "Les données collectées servent uniquement à améliorer l'expérience utilisateur. Aucune donnée personnelle identifiable n'est collectée.",
-   
-         cookies: "3. Cookies",
-         cookiesDescription: "Google Analytics utilise des cookies pour collecter ces informations. Vous pouvez les désactiver via les paramètres de votre navigateur.",
-   
-         contact: "4. Contact",
-         contactInfo: "Pour toute question, contactez-nous à",
-   
-         faqDataCollection: "Quels types de données collectons-nous ?",
-         faqDataCollectionAnswer: "Nous collectons des données anonymes comme les pages visitées, la durée des visites, et le type d'appareil utilisé.",
-   
-         faqDataUsage: "Comment utilisons-nous ces données ?",
-         faqDataUsageAnswer: "Les données collectées servent uniquement à améliorer l’expérience utilisateur.",
-   
-         faqCookies: "Que sont les cookies utilisés par Google Analytics ?",
-         faqCookiesAnswer: "Les cookies sont utilisés pour collecter des informations de manière anonyme et analyser les tendances du site.",
-   
-         backToHome: "Retour à l'accueil",
+      // 🔹 Politique de Confidentialité
+      privacyPolicyTitle: "Politique de Confidentialité",
+      privacyPolicyDescription: "Découvrez notre politique de confidentialité concernant l'utilisation des cookies et Google Analytics.",
+      privacyPolicyIntro: "Votre confidentialité est importante pour nous. Nous utilisons Google Analytics pour analyser l’audience de notre site de manière anonyme.",
 
-         // 🔹 Bannière Cookies
+      dataCollected: "1. Données collectées",
+      dataCollectedPages: "Pages visitées",
+      dataCollectedTime: "Durée des visites",
+      dataCollectedDevice: "Type d’appareil utilisé",
+
+      dataUsage: "2. Utilisation des données",
+      dataUsageDescription: "Les données collectées servent uniquement à améliorer l'expérience utilisateur. Aucune donnée personnelle identifiable n'est collectée.",
+
+      cookies: "3. Cookies",
+      cookiesDescription: "Google Analytics utilise des cookies pour collecter ces informations. Vous pouvez les désactiver via les paramètres de votre navigateur.",
+
+      contact: "4. Contact",
+      contactInfo: "Pour toute question, contactez-nous à",
+
+      faqDataCollection: "Quels types de données collectons-nous ?",
+      faqDataCollectionAnswer: "Nous collectons des données anonymes comme les pages visitées, la durée des visites, et le type d'appareil utilisé.",
+
+      faqDataUsage: "Comment utilisons-nous ces données ?",
+      faqDataUsageAnswer: "Les données collectées servent uniquement à améliorer l’expérience utilisateur.",
+
+      faqCookies: "Que sont les cookies utilisés par Google Analytics ?",
+      faqCookiesAnswer: "Les cookies sont utilisés pour collecter des informations de manière anonyme et analyser les tendances du site.",
+
+      backToHome: "Retour à l'accueil",
+
+      // 🔹 Bannière Cookies
       cookieTitle: "Nous respectons votre vie privée",
       cookieMessage: "Ce site utilise des cookies uniquement pour analyser le trafic et améliorer votre expérience utilisateur.",
       acceptCookies: "Accepter",
       refuseCookies: "Refuser",
-       cvNotVisible: "Si le CV ne s'affiche pas correctement,",
+      cvNotVisible: "Si le CV ne s'affiche pas correctement,",
       cvAdobeExtension: "désactivez temporairement votre extension Adobe ou ouvrez-le dans un nouvel onglet."
 
     }
@@ -132,6 +135,9 @@ const resources = {
       technologiesUsed: "Technologies used",
       viewOnGithub: "View on GitHub",
       notAvailable: "Not available",
+      miniblog: "MiniBlog (TP CDA)",
+      miniblogDesc: "Web application simulating a mini-blog with a mock API. Add and delete posts, pagination, search, light/dark theme.",
+
 
       // 🔹 Services
       myServices: "My Services",
@@ -171,55 +177,55 @@ const resources = {
       // 🔹 Buttons
       backToHome: "Back to Home",
 
-     // 🔹 Footer
+      // 🔹 Footer
       allRightsReserved: "All rights reserved.",
       privacyPolicy: "Privacy Policy",
 
-       // 🔹 Privacy Policy
-       privacyPolicyTitle: "Privacy Policy",
-       privacyPolicyDescription: "Learn about our privacy policy regarding the use of cookies and Google Analytics.",
-       privacyPolicyIntro: "Your privacy is important to us. We use Google Analytics to analyze our site's audience anonymously.",
- 
-       dataCollected: "1. Collected Data",
-       dataCollectedPages: "Visited pages",
-       dataCollectedTime: "Duration of visits",
-       dataCollectedDevice: "Device type used",
- 
-       dataUsage: "2. Data Usage",
-       dataUsageDescription: "The collected data is used solely to improve the user experience. No personally identifiable data is collected.",
- 
-       cookies: "3. Cookies",
-       cookiesDescription: "Google Analytics uses cookies to collect this information. You can disable them in your browser settings.",
- 
-       contact: "4. Contact",
-       contactInfo: "For any inquiries, contact us at",
- 
-       faqDataCollection: "What types of data do we collect?",
-       faqDataCollectionAnswer: "We collect anonymous data such as visited pages, duration of visits, and device type used.",
- 
-       faqDataUsage: "How do we use this data?",
-       faqDataUsageAnswer: "The collected data is used solely to improve the user experience.",
- 
-       faqCookies: "What are the cookies used by Google Analytics?",
-       faqCookiesAnswer: "Cookies are used to collect information anonymously and analyze site trends.",
- 
-       backToHome: "Back to Home",
+      // 🔹 Privacy Policy
+      privacyPolicyTitle: "Privacy Policy",
+      privacyPolicyDescription: "Learn about our privacy policy regarding the use of cookies and Google Analytics.",
+      privacyPolicyIntro: "Your privacy is important to us. We use Google Analytics to analyze our site's audience anonymously.",
 
-           // 🔹 Cookie Banner
+      dataCollected: "1. Collected Data",
+      dataCollectedPages: "Visited pages",
+      dataCollectedTime: "Duration of visits",
+      dataCollectedDevice: "Device type used",
+
+      dataUsage: "2. Data Usage",
+      dataUsageDescription: "The collected data is used solely to improve the user experience. No personally identifiable data is collected.",
+
+      cookies: "3. Cookies",
+      cookiesDescription: "Google Analytics uses cookies to collect this information. You can disable them in your browser settings.",
+
+      contact: "4. Contact",
+      contactInfo: "For any inquiries, contact us at",
+
+      faqDataCollection: "What types of data do we collect?",
+      faqDataCollectionAnswer: "We collect anonymous data such as visited pages, duration of visits, and device type used.",
+
+      faqDataUsage: "How do we use this data?",
+      faqDataUsageAnswer: "The collected data is used solely to improve the user experience.",
+
+      faqCookies: "What are the cookies used by Google Analytics?",
+      faqCookiesAnswer: "Cookies are used to collect information anonymously and analyze site trends.",
+
+      backToHome: "Back to Home",
+
+      // 🔹 Cookie Banner
       cookieTitle: "We respect your privacy",
       cookieMessage: "This site uses cookies only to analyze traffic and improve your user experience.",
       acceptCookies: "Accept",
       refuseCookies: "Decline",
-       cvNotVisible: "If the CV does not display properly,",
-        cvAdobeExtension: "temporarily disable your Adobe extension or open it in a new tab."
-      
-      
-      
-       
-      
-      
+      cvNotVisible: "If the CV does not display properly,",
+      cvAdobeExtension: "temporarily disable your Adobe extension or open it in a new tab."
 
-          
+
+
+
+
+
+
+
 
     }
   }

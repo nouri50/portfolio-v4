@@ -19,6 +19,13 @@ import "./Styles/global.css";
 // ✅ Chargement via .env
 const MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID;
 
+const lang = navigator.language.slice(0, 2);
+const supported = ["fr", "en"];
+if (!supported.includes(lang)) {
+  console.warn("Langue non supportée. Le navigateur gérera la traduction.");
+}
+
+
 const App = () => {
   const location = useLocation();
 

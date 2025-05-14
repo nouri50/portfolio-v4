@@ -1,20 +1,34 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
-  plugins: [react()],
-  base: "./", // ✅ Important pour éviter le 404 lors du serve -s dist
-  server: {
-    port: 4000,
-    open: true,
-    strictPort: true,
-    historyApiFallback: true, // ✅ Pas nécessaire avec Vite mais OK pour du preview custom
-  },
-  preview: {
-    port: 3000,
-  },
-  build: {
-    outDir: "dist",
-    emptyOutDir: true,
-  },
+  plugins: [
+    react(),
+    VitePWA({
+      registerType: 'autoUpdate',
+      includeAssets: ['favicon.svg', 'favicon.ico', 'robots.txt', 'apple-touch-icon.png'],
+      manifest: {
+        name: 'Nouri Morouche Portfolio',
+        short_name: 'Portfolio',
+        description: 'Portfolio développeur web - Nouri Morouche',
+        theme_color: '#004aad',
+        background_color: '#ffffff',
+        display: 'standalone',
+        start_url: '/',
+        icons: [
+          {
+            src: '/pwa-192x192.png',
+            sizes: '192x192',
+            type: 'image/png'
+          },
+          {
+            src: '/pwa-512x512.png',
+            sizes: '512x512',
+            type: 'image/png'
+          }
+        ]
+      }
+    })
+  ]
 });
