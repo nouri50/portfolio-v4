@@ -7,24 +7,38 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.svg', 'favicon.ico', 'robots.txt', 'apple-touch-icon.png'],
+      devOptions: {
+        enabled: true, // ✅ Active la PWA en mode dev
+      },
+      includeAssets: [
+        'favicon.ico',
+        'favicon.svg',
+        'apple-touch-icon.png',
+        'android-icon-192x192.png',
+        'android-icon-512x512.png'
+      ],
       manifest: {
-        name: 'Nouri Morouche Portfolio',
+        name: 'Portfolio Nouri Morouche',
         short_name: 'Portfolio',
-        description: 'Portfolio développeur web - Nouri Morouche',
-        theme_color: '#004aad',
+        description: 'Mon portfolio développeur web',
+        theme_color: '#ffffff',
         background_color: '#ffffff',
         display: 'standalone',
         start_url: '/',
         icons: [
           {
-            src: '/pwa-192x192.png',
+            src: '/android-icon-192x192.png',
             sizes: '192x192',
             type: 'image/png'
           },
           {
-            src: '/pwa-512x512.png',
-            sizes: '512x512',
+            src: '/android-icon-144x144.png',
+            sizes: '144x144',
+            type: 'image/png'
+          },
+          {
+            src: '/favicon-96x96.png',
+            sizes: '96x96',
             type: 'image/png'
           }
         ]
